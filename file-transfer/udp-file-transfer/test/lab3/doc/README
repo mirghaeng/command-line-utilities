@@ -1,0 +1,28 @@
+Name: Miranda Eng
+
+doc/README
+	This file.
+
+doc/DOCUMENTATION
+	Documentation of internal design of reliable UDP file
+	transfer.
+
+src/myserver.c
+	Server side that allows client to get file size and download
+	file content in chunks using UDP.
+
+src/myclient.c
+	Client side that provides a list of server information, the
+	number of server-port pairs, and filename to get the content
+	of the requested file using UDP.
+
+src/packet.h
+	Helper side to help with packet topology.
+
+NOTE:
+	The code is incomplete. For reasons unknown to me, I was
+	unable to open the requested file on the server side.
+	And this made it difficult to proceed further in the lab
+	since I was not able to test out the rest of the code.
+	My code can read the server-info.text file, get file size,
+	but is not able to get file content.

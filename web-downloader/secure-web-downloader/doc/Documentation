@@ -1,0 +1,42 @@
+Documentation
+
+Application:
+
+	The client side of a simple secure HTTP-based download application
+	similar to wget. It uses the SSL library when the URL specifies the
+	https:// scheme. To handle the hostname, the application determines
+	the IP address using the DNS library.
+
+	- Build the executable program
+		make
+
+	- Run the executable program
+
+		- For GET functionality, run
+			./myweb https://example.com:443/index.html
+
+			- Read output.dat for requested info
+
+		- For HEAD functionality, run
+			./myweb https://example.com:443/index.html -h
+
+			- Read stdout for request info
+
+Design:
+
+	- Set SSLmode to 0
+	- Tokenize the arguments
+	- If first token is not "https", set SSLmode to 1
+	- Initialize socket, hostname, port, address
+	- Connect socket
+	- If SSLmode == 1, initialize SSL
+	- Check if "-h" in arguments, then format request
+	- Send request accordingly to SSLmode
+	- If HEAD request, read response up to "\r\n\r\n"
+		accordingly to SSLmode and print to stdout
+	- If GET request, read response up to "\r\n\r\n"
+		accordingly to SSLmode and store string
+		- Find "Content-Length" and get its value
+		- Print response up to a size of value 
+
+Shortcomings:

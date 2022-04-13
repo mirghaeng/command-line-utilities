@@ -1,0 +1,29 @@
+Lab1 - HTTP Requests on Client
+
+Goal:
+	Client can make HEAD and GET requests and
+	receive HEAD response in stdout and
+	receive GET response in output.dat.
+	For HEAD request, client can enter:
+	./myweb www.example.com 93.184.216.34:80/index.html -h
+	For GET request, client can enter:
+	./myweb www.example.com 93.184.216.34:80/index.html
+	The specified port# is optional.	
+
+Application and Design:
+	We can tokenize the command arguments and set the
+	hostname, pathname, ip, port#, and request type.
+	Create socket, setup the address fields, and tcp
+	connect to socket. Write and send the specified
+	request. If the request type is HEAD, read and
+	print the request to stdout until "\r\n\r\n".
+	If the request type is GET, get header string and
+	find Content-Length. Starting from the end of
+	the header, read and print the response body to
+	output.dat until the specified Content-Length
+	is reached.
+
+Potential Shortcomings:
+	If the client wishes to send a GET request and 
+	the corresponding HTTP response does not contain
+	a Content-Length, then client program will not work.

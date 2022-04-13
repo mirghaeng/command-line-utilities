@@ -1,0 +1,23 @@
+Application/Design
+	TCP-based chat program composed of a client
+	for the end users and a server program which
+	will be used to connect clients so that they
+	can exchange messages. The client should
+	operate in three modes:
+	INFO - asking server for information
+	WAIT - waiting to be contacted by another
+		client
+	CHAT - exchanging messages with another
+		client
+	INFO mode support the following commands:
+	/list - get client list
+	/wait - insert client to client list and
+		enter WAIT mode
+	/connect <ID> - start conversation with
+			<ID> and enter CHAT mode
+	/quit - leave program
+
+Shortcomings
+	The program is very buggy
+	Sending client ID from client side results in
+	a fatal error

@@ -1,0 +1,4 @@
+Describe design
+a specification of the application-layer protocol,
+describing the handshakes involved, message formats,
+error handling, etc.

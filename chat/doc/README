@@ -1,0 +1,21 @@
+Name: Miranda Eng
+Student ID: 1549980
+
+doc/README
+	This file. Describes each file
+
+doc/Documentation
+	Explains the application, design, and
+	shortcomings
+
+src/myclient.c
+	A program that prompts the user to
+	enter commands: /list, /wait, /connect
+	in TCP-based chat program
+
+src/myserver.c
+	A server program that hosts a list of
+	clients for chatting
+
+src/clientlist.c
+	A helper program for linked list

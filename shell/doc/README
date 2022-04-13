@@ -1,0 +1,33 @@
+Name: Miranda Eng
+
+../src/myserver.c
+	server side of simple remote shell
+
+../src/myclient.c
+	client side of simple remote shell
+
+../src/Makefile
+	creates executables for this lab
+
+README
+	this file
+
+Documentation
+	explains how to and design
+
+NOTE:
+	There is a bug in my code, thus I was not able to
+	continue with much of the lab. On the client side,
+	recv() does not stop reading even though I had
+	restricted it to execute only if > 0 in a while loop
+
+	I fixed the bug to an extent. Instead of putting
+	recv() in a loop, I transmit the length information
+	first, and subsequetly call recv() until length
+	information has been reached. However, my
+	implementation left some extra output, like
+	MSG_STOPREADING
+
+	For some reason, I can't run ./myserver 1234
+	It gives me bind() error even though i had only
+	tried to alter code regarding recv()

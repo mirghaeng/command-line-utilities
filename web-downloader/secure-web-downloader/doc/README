@@ -1,0 +1,19 @@
+README
+
+Name: Miranda Eng
+Student ID: 1549980
+
+../src/myweb.c
+	client side of a simple secure HTTP-based download
+	application similar to wget
+
+../src/Makefile
+	builds the executable program from the required
+	source file
+
+../doc/Documentation
+	describes the application, design, and shortcomings
+	of the program
+
+../doc/README
+	list of files in the submission

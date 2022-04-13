@@ -1,0 +1,30 @@
+Design
+
+run
+./myserver <port-number>
+./myclient <server-info.text> <num-chunks> <filename>
+
+Server waits to receive a packet
+	- If the packet is a request_filesize, then get file size,
+	store in packet, and send to client
+	- If the packet is a request_chunksize, then read file size,
+	set chunk start byte accordingly, copy chunk content to
+	outgoing packet, and send to client
+
+Client
+	- get server info
+	- get file size
+		- open UDP connection for num ammount of servers
+		and retransmit 10 times for each server to send
+		request_filesize
+		- if the packet is a respond_filesize, print
+		out file size
+	- create threads and set start_byte and byte_size
+	accordingly
+	- get file content
+		- using pthreads, for each thread, send packet
+		with request_chunkcontent, wait for timeout, then
+		get packet with respond_chunkcontent, and
+		store content for each thread 
+		- append thread content into output file
+	

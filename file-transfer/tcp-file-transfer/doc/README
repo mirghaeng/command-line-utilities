@@ -1,0 +1,20 @@
+Name: Miranda Eng
+
+myclient.c
+	client download "chunks" of a file from
+	multiple servers
+
+myserver.c
+	server follows client file transfer
+	protocol instructions to give file size
+	and allow downloading of "chunks"
+
+README
+	describes the files in lab2
+
+NOTE:
+My code does not work properly. I still need to
+implement a mutex to allow server processes threads
+to access a file to write the chunks into one at a
+time, using pwrite(). I am currently stuck at writing
+integer values from server to client and vice versa.

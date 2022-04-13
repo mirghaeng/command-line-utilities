@@ -1,0 +1,16 @@
+Name: Miranda Eng
+Student ID: 1549980
+
+doc/README
+	This file. Describes each file in lab1
+
+doc/Documentation
+	Explains the application, design, and
+	shortcomings in lab1
+
+src/Makefile
+	Builds the client program
+
+src/client.c
+	A programs that writes HEAD/GET requests
+	and reads their respective HTTP responses

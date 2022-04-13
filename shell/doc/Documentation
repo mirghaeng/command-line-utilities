@@ -1,0 +1,36 @@
+DOCUMENTATION
+
+HOW TO / DESIGN:
+- run
+	./myserver 1234
+	./myclient 127.0.0.1 1234
+	./myclient 127.0.0.1 1234
+		  ...
+	./myclient 127.0.0.1 123
+- client is prompted to enter a command
+afer "client $ "
+	cat /etc/resolv.conf
+	cat <filename>
+	date
+	df -h
+	du
+	echo $PATH
+	echo <environment variable>
+	free
+	last
+	ps aux
+	pwd
+	set
+	tty
+	uname -a
+	uptime
+	who
+	exit
+- if not, server receives the command
+and sends the executable size to client
+- client receives the executable
+size and requests for the output
+- server sends the output
+- client prints output on stdout
+- continue until client enters
+"exit", then terminate
